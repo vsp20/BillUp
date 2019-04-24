@@ -13,6 +13,8 @@
 		C9FB099E2270B39500FA42A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FB099D2270B39500FA42A3 /* Assets.xcassets */; };
 		C9FB09A12270B39500FA42A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FB099F2270B39500FA42A3 /* LaunchScreen.storyboard */; };
 		C9FB09AC2270B39500FA42A3 /* BillUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB09AB2270B39500FA42A3 /* BillUpTests.swift */; };
+		C9FB09B92271196F00FA42A3 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB09B82271196F00FA42A3 /* NewBillViewController.swift */; };
+		C9FB09BB227121D000FA42A3 /* AddPeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB09BA227121D000FA42A3 /* AddPeopleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C9FB09A72270B39500FA42A3 /* BillUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FB09AB2270B39500FA42A3 /* BillUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillUpTests.swift; sourceTree = "<group>"; };
 		C9FB09AD2270B39500FA42A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9FB09B82271196F00FA42A3 /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
+		C9FB09BA227121D000FA42A3 /* AddPeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPeopleVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				C9FB09962270B39500FA42A3 /* AppDelegate.swift */,
 				C9FB09982270B39500FA42A3 /* ViewController.swift */,
+				C9FB09B82271196F00FA42A3 /* NewBillViewController.swift */,
+				C9FB09BA227121D000FA42A3 /* AddPeopleVC.swift */,
 				C9FB099A2270B39500FA42A3 /* Main.storyboard */,
 				C9FB099D2270B39500FA42A3 /* Assets.xcassets */,
 				C9FB099F2270B39500FA42A3 /* LaunchScreen.storyboard */,
@@ -201,6 +207,8 @@
 			files = (
 				C9FB09992270B39500FA42A3 /* ViewController.swift in Sources */,
 				C9FB09972270B39500FA42A3 /* AppDelegate.swift in Sources */,
+				C9FB09B92271196F00FA42A3 /* NewBillViewController.swift in Sources */,
+				C9FB09BB227121D000FA42A3 /* AddPeopleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
