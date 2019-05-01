@@ -16,6 +16,18 @@ class AddPeopleVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var nameText: UITextField!
+    
+    
+    @IBOutlet weak var numberText: UITextField!
+    
+    @IBAction func addPersonButton(_ sender: Any) {
+        if(nameText.text != ""){
+            Global.sharedManager.personList.append(nameText.text! + "  -  " + numberText.text!)
+            nameText.text = ""
+        }
+    }
+    
     @IBAction func closePopup(_ sender: Any) {
         dismiss(animated: true, completion:nil)
     }

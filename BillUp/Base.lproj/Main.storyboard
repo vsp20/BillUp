@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3y5-fv-VtP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="sho-jp-m5u">
+            <objects>
+                <tabBarController id="3y5-fv-VtP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zra-NI-y4E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="oej-Gt-eec"/>
+                        <segue destination="Ozl-9b-6Cy" kind="relationship" relationship="viewControllers" id="War-31-VoW"/>
+                        <segue destination="fYG-nT-cHZ" kind="relationship" relationship="viewControllers" id="WjZ-kF-yzG"/>
+                        <segue destination="NBh-sp-sBQ" kind="relationship" relationship="viewControllers" id="QtZ-g8-P7Y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvo-q3-Zyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498" y="27"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,12 +60,103 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Ab3-L6-oSG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338" y="72"/>
+            <point key="canvasLocation" x="198" y="-370"/>
         </scene>
-        <!--New Bill View Controller-->
+        <!--Item-->
+        <scene sceneID="dUJ-1Z-szl">
+            <objects>
+                <viewController id="fYG-nT-cHZ" customClass="itemListViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RsA-za-2kA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vD7-SW-vm5">
+                                <rect key="frame" x="0.0" y="47" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellP" id="j83-Jh-QBz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j83-Jh-QBz" id="7Z6-4B-1JC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fYG-nT-cHZ" id="D8p-ll-NRe"/>
+                                    <outlet property="delegate" destination="fYG-nT-cHZ" id="WZ4-RK-M1k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vD7-SW-vm5" firstAttribute="trailing" secondItem="Xlb-5O-mCI" secondAttribute="trailing" id="EO8-0X-mzf"/>
+                            <constraint firstItem="vD7-SW-vm5" firstAttribute="bottom" secondItem="Xlb-5O-mCI" secondAttribute="bottom" id="ZIY-nU-65h"/>
+                            <constraint firstItem="vD7-SW-vm5" firstAttribute="leading" secondItem="Xlb-5O-mCI" secondAttribute="leading" id="eYg-Vy-hvU"/>
+                            <constraint firstItem="vD7-SW-vm5" firstAttribute="top" secondItem="Xlb-5O-mCI" secondAttribute="top" constant="20" id="m37-5q-Jjn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xlb-5O-mCI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="dMB-w0-cLu"/>
+                    <connections>
+                        <outlet property="myTableView" destination="vD7-SW-vm5" id="x14-Fd-zeF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJe-IL-5Em" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311.19999999999999" y="440.32983508245883"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Kc1-VV-hGB">
+            <objects>
+                <viewController id="NBh-sp-sBQ" customClass="pplListViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udS-Is-bSz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cBa-2X-WTp">
+                                <rect key="frame" x="0.0" y="42" width="375" height="576"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellP" id="5Iw-sM-J5Y">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Iw-sM-J5Y" id="asc-aK-Pra">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NBh-sp-sBQ" id="bx3-8h-Lmf"/>
+                                    <outlet property="delegate" destination="NBh-sp-sBQ" id="1Wc-GO-fgJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cBa-2X-WTp" firstAttribute="trailing" secondItem="G8x-wj-oRQ" secondAttribute="trailing" id="VEL-7m-oJu"/>
+                            <constraint firstItem="cBa-2X-WTp" firstAttribute="leading" secondItem="G8x-wj-oRQ" secondAttribute="leading" id="fbk-Zp-VdA"/>
+                            <constraint firstItem="cBa-2X-WTp" firstAttribute="bottom" secondItem="G8x-wj-oRQ" secondAttribute="bottom" id="fbz-sR-Jxb"/>
+                            <constraint firstItem="cBa-2X-WTp" firstAttribute="top" secondItem="G8x-wj-oRQ" secondAttribute="top" constant="22" id="oAQ-Zr-hM2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G8x-wj-oRQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="90P-Ox-BgD"/>
+                    <connections>
+                        <outlet property="myTableView" destination="cBa-2X-WTp" id="oKQ-9b-61h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5D9-jj-5BW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="1171.6641679160421"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="mVk-cw-OcX">
             <objects>
                 <viewController id="Ozl-9b-6Cy" customClass="NewBillViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,19 +172,8 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="dfD-Mq-BLn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wA-D7-h17">
-                                <rect key="frame" x="121" y="63" width="133" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="+ Add Item">
-                                    <color key="titleColor" red="0.49735029034046307" green="0.49735029034046307" blue="0.49735029034046307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="o5r-0m-BWj" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="ZoP-aW-3sX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNI-zi-zRq">
-                                <rect key="frame" x="96" y="562" width="182" height="61"/>
+                                <rect key="frame" x="96" y="227" width="182" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+ Add People">
@@ -83,10 +183,22 @@
                                     <segue destination="2Me-Jl-lSS" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="J7z-sf-wsp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wA-D7-h17">
+                                <rect key="frame" x="121" y="115" width="133" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="+ Add Item">
+                                    <color key="titleColor" red="0.49735029034046307" green="0.49735029034046307" blue="0.49735029034046307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="o5r-0m-BWj" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="ZoP-aW-3sX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="bWO-lH-weB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="rgR-ZN-NWX"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -122,6 +234,7 @@
                                             <color key="titleColor" red="0.9710590014803594" green="0.9710590014803594" blue="0.9710590014803594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="addItemButton:" destination="o5r-0m-BWj" eventType="touchUpInside" id="H8Y-8N-nYZ"/>
                                             <action selector="closePopup:" destination="o5r-0m-BWj" eventType="touchUpInside" id="8sQ-4J-VvI"/>
                                         </connections>
                                     </button>
@@ -140,6 +253,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75049515845070425" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="GsM-ez-rqE"/>
                     </view>
+                    <connections>
+                        <outlet property="itemPrice" destination="9aS-uk-8BS" id="3YM-Al-bYr"/>
+                        <outlet property="itemText" destination="YZz-bn-gzS" id="1Ct-IJ-qse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chf-R3-HSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,6 +294,7 @@
                                         <color key="backgroundColor" red="0.95104200018502272" green="0.95104200018502272" blue="0.95104200018502272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Done"/>
                                         <connections>
+                                            <action selector="addPersonButton:" destination="2Me-Jl-lSS" eventType="touchUpInside" id="2aX-DR-3nF"/>
                                             <action selector="closePopup:" destination="2Me-Jl-lSS" eventType="touchUpInside" id="0WQ-AA-jph"/>
                                         </connections>
                                     </button>
@@ -187,10 +305,18 @@
                         <color key="backgroundColor" white="1" alpha="0.74900968309859151" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="3to-9h-bQf"/>
                     </view>
+                    <connections>
+                        <outlet property="nameText" destination="kPz-Xu-dLr" id="8CM-Qt-5nX"/>
+                        <outlet property="numberText" destination="fWY-uZ-eej" id="8sd-gX-zdW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mff-0f-mqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2234" y="588"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="War-31-VoW"/>
+        <segue reference="oej-Gt-eec"/>
+    </inferredMetricsTieBreakers>
 </document>

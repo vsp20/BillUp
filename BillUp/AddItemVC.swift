@@ -14,6 +14,18 @@ class AddItemVC: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBOutlet weak var itemText: UITextField!
+    
+    @IBOutlet weak var itemPrice: UITextField!
+    
+    @IBAction func addItemButton(_ sender: Any) {
+        if(itemText.text != ""){
+            Global.sharedManager.iList.append(itemText.text! + "  -  " + itemPrice.text!)
+            itemText.text = ""
+        }
+    }
+    
+    
     @IBAction func closePopup(_ sender: Any) {
         dismiss(animated: true, completion:nil)
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38E027D32279DC32009DA2A2 /* itemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E027D22279DC32009DA2A2 /* itemListViewController.swift */; };
+		38E027D52279EA31009DA2A2 /* pplListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E027D42279EA31009DA2A2 /* pplListViewController.swift */; };
 		C9FB09972270B39500FA42A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB09962270B39500FA42A3 /* AppDelegate.swift */; };
 		C9FB09992270B39500FA42A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB09982270B39500FA42A3 /* ViewController.swift */; };
 		C9FB099C2270B39500FA42A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FB099A2270B39500FA42A3 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38E027D22279DC32009DA2A2 /* itemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListViewController.swift; sourceTree = "<group>"; };
+		38E027D42279EA31009DA2A2 /* pplListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pplListViewController.swift; sourceTree = "<group>"; };
 		C9FB09932270B39500FA42A3 /* BillUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FB09962270B39500FA42A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FB09982270B39500FA42A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 		C9FB098A2270B39500FA42A3 = {
 			isa = PBXGroup;
 			children = (
+				38E027D22279DC32009DA2A2 /* itemListViewController.swift */,
+				38E027D42279EA31009DA2A2 /* pplListViewController.swift */,
 				C9FB09952270B39500FA42A3 /* BillUp */,
 				C9FB09AA2270B39500FA42A3 /* BillUpTests */,
 				C9FB09942270B39500FA42A3 /* Products */,
@@ -208,11 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E027D52279EA31009DA2A2 /* pplListViewController.swift in Sources */,
 				C9FB09BD2271F53400FA42A3 /* AddItemVC.swift in Sources */,
 				C9FB09992270B39500FA42A3 /* ViewController.swift in Sources */,
 				C9FB09972270B39500FA42A3 /* AppDelegate.swift in Sources */,
 				C9FB09B92271196F00FA42A3 /* NewBillViewController.swift in Sources */,
 				C9FB09BB227121D000FA42A3 /* AddPeopleVC.swift in Sources */,
+				38E027D32279DC32009DA2A2 /* itemListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
