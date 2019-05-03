@@ -7,21 +7,6 @@
 //
 
 import UIKit
-
-class Global{
-    var iList = ["test 1", "test 2", "test 3"]
-    var personList = ["test p1", "test p2", "test p3"]
-    var priceList = ["price1", "price2", "price3"]
-    
-    class var sharedManager: Global{
-        struct Static {
-            static let instance = Global()
-        }
-        return Static.instance
-        
-    }
-}
-
 class itemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

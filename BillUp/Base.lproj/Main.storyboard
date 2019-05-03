@@ -30,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-498" y="27"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,35 +38,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2G-8s-MLP">
-                                <rect key="frame" x="15" y="73" width="343.00000000000011" height="98"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How it works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUB-rz-lGi">
+                                <rect key="frame" x="16" y="65" width="343" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Bill"/>
-                                <connections>
-                                    <segue destination="Ozl-9b-6Cy" kind="presentation" modalTransitionStyle="crossDissolve" id="zNG-Ch-stZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRr-dm-O3F">
-                                <rect key="frame" x="15" y="194" width="343" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Step 1: Add people to your bill who will be splitting any costs throughout your trip" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-tC-X9p">
+                                <rect key="frame" x="16" y="134" width="240" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recipts"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fs-hD-IeW">
-                                <rect key="frame" x="15" y="329" width="343" height="91"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-L5-5v0">
+                                <rect key="frame" x="16" y="251" width="240" height="117.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="How it works"/>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Step 2: Add any items to your bill that you or your friends split the cost of (you may add any amount of people to the current item)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYO-Kl-cql">
+                                <rect key="frame" x="16" y="407" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Step 3: Once you are done adding items you may calculate your bill which will give you the running totals oh each person on your trip</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ab3-L6-oSG"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="Ab3-L6-oSG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="-370"/>
+            <point key="canvasLocation" x="197.59999999999999" y="-370.16491754122939"/>
         </scene>
-        <!--Item-->
+        <!--Items List-->
         <scene sceneID="dUJ-1Z-szl">
             <objects>
                 <viewController id="fYG-nT-cHZ" customClass="itemListViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +114,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xlb-5O-mCI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dMB-w0-cLu"/>
+                    <tabBarItem key="tabBarItem" title="Items List" id="dMB-w0-cLu"/>
                     <connections>
                         <outlet property="myTableView" destination="vD7-SW-vm5" id="x14-Fd-zeF"/>
                     </connections>
@@ -111,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="311.19999999999999" y="440.32983508245883"/>
         </scene>
-        <!--Item-->
+        <!--People List-->
         <scene sceneID="Kc1-VV-hGB">
             <objects>
                 <viewController id="NBh-sp-sBQ" customClass="pplListViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +159,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G8x-wj-oRQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="90P-Ox-BgD"/>
+                    <tabBarItem key="tabBarItem" title="People List" id="90P-Ox-BgD"/>
                     <connections>
                         <outlet property="myTableView" destination="cBa-2X-WTp" id="oKQ-9b-61h"/>
                     </connections>
@@ -156,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="316" y="1171.6641679160421"/>
         </scene>
-        <!--Item-->
+        <!--Add-->
         <scene sceneID="mVk-cw-OcX">
             <objects>
                 <viewController id="Ozl-9b-6Cy" customClass="NewBillViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,19 +198,11 @@
                                     <segue destination="o5r-0m-BWj" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="ZoP-aW-3sX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSv-gD-fre">
-                                <rect key="frame" x="16" y="46" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="dfD-Mq-BLn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="bWO-lH-weB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rgR-ZN-NWX"/>
+                    <tabBarItem key="tabBarItem" title="Add" id="rgR-ZN-NWX"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -219,7 +223,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZz-bn-gzS">
-                                        <rect key="frame" x="8" y="63" width="241" height="30"/>
+                                        <rect key="frame" x="8" y="63" width="241" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92244339267206921" green="0.92244339267206921" blue="0.92244339267206921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
@@ -227,7 +231,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-TH-wrM">
-                                        <rect key="frame" x="8" y="446" width="249" height="59"/>
+                                        <rect key="frame" x="8" y="456" width="249" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Done">
@@ -238,8 +242,51 @@
                                             <action selector="closePopup:" destination="o5r-0m-BWj" eventType="touchUpInside" id="8sQ-4J-VvI"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZYE-re-B5w">
+                                        <rect key="frame" x="12" y="234" width="240" height="208"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-0j-Yc1">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                <state key="normal" title="Add People"/>
+                                                <connections>
+                                                    <action selector="peopleDropdown:" destination="o5r-0m-BWj" eventType="touchUpInside" id="QaK-xV-8Qh"/>
+                                                </connections>
+                                            </button>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-tR-8LX">
+                                                <rect key="frame" x="0.0" y="38" width="240" height="170"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="170" id="AKC-n0-0ie"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peopleCell" textLabel="etm-L8-Qya" style="IBUITableViewCellStyleDefault" id="H3n-sI-BL1">
+                                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H3n-sI-BL1" id="uRO-dS-fWi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="etm-L8-Qya">
+                                                                    <rect key="frame" x="15" y="0.0" width="210" height="43.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="o5r-0m-BWj" id="kXd-hy-mLk"/>
+                                                    <outlet property="delegate" destination="o5r-0m-BWj" id="xus-Xy-EFQ"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aS-uk-8BS">
-                                        <rect key="frame" x="8" y="167" width="241" height="30"/>
+                                        <rect key="frame" x="8" y="153" width="237" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.938554143967406" green="0.938554143967406" blue="0.938554143967406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
@@ -254,6 +301,8 @@
                         <viewLayoutGuide key="safeArea" id="GsM-ez-rqE"/>
                     </view>
                     <connections>
+                        <outlet property="addPeopleButton" destination="ZYE-re-B5w" id="KRn-7U-zaO"/>
+                        <outlet property="dropdownTableview" destination="lCk-tR-8LX" id="YW0-rK-WWn"/>
                         <outlet property="itemPrice" destination="9aS-uk-8BS" id="3YM-Al-bYr"/>
                         <outlet property="itemText" destination="YZz-bn-gzS" id="1Ct-IJ-qse"/>
                     </connections>
@@ -274,14 +323,14 @@
                                 <rect key="frame" x="56" y="95" width="263" height="477"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPz-Xu-dLr">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPz-Xu-dLr">
                                         <rect key="frame" x="24" y="106" width="231" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Phone Number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-uZ-eej">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-uZ-eej">
                                         <rect key="frame" x="24" y="183" width="231" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,8 +364,4 @@
             <point key="canvasLocation" x="2234" y="588"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zNG-Ch-stZ"/>
-        <segue reference="dfD-Mq-BLn"/>
-    </inferredMetricsTieBreakers>
 </document>

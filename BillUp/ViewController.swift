@@ -8,8 +8,12 @@
 
 import UIKit
 
-class Bill {
-    
+
+
+class Global{
+    var personList: [String] = []
+    var priceList: [String] = []
+    var iList: [String] = []
     //Dictionary that represents the totals for all the people in the bill
     var userTotals: [Person: Double] = [:]
     
@@ -39,13 +43,29 @@ class Bill {
     func addItem(name: String, totalPrice: Double, people: [itemPerson]) {
         let item: Item = Item(name: name, totalPrice: totalPrice, people: people)
         items.append(item)
+        print(people)
     }
-
+    
     
     func addPerson(name: String, phoneNumber: String){
         let person: Person = Person(name: name, phoneNumber: phoneNumber)
-         userTotals[person] = 0.0
+        if !userTotals.keys.contains(person){
+            userTotals[person] = 0.0
+        }
     }
+    
+    class var sharedManager: Global{
+        struct Static {
+            static let instance = Global()
+        }
+        return Static.instance
+        
+    }
+}
+
+
+class Bill {
+  
 }
 
 class Person: Hashable {

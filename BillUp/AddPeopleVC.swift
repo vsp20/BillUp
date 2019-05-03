@@ -23,8 +23,16 @@ class AddPeopleVC: UIViewController {
     
     @IBAction func addPersonButton(_ sender: Any) {
         if(nameText.text != ""){
-            Global.sharedManager.personList.append(nameText.text! + "  -  " + numberText.text!)
-            nameText.text = ""
+            Global.sharedManager.personList.append(nameText.text! + "   Phone #:  " + numberText.text!)
+            Global.sharedManager.addPerson(name: nameText.text!, phoneNumber: numberText.text!)
+
+        }
+        else{
+            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+                (action) in alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

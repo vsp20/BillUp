@@ -8,30 +8,73 @@
 
 import UIKit
 
-class AddItemVC: UIViewController {
-
+class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var itemText: UITextField!
+    @IBOutlet weak var itemPrice: UITextField!
+    @IBOutlet weak var dropdownTableview: UITableView!
+    @IBOutlet weak var addPeopleButton: UIStackView!
+    var itemPersonList: [itemPerson] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        dropdownTableview.isHidden = true
+        dropdownTableview.reloadData()
     }
-
-    @IBOutlet weak var itemText: UITextField!
     
-    @IBOutlet weak var itemPrice: UITextField!
     
+    @IBAction func peopleDropdown(_ sender: Any) {
+        dropdownTableview.isHidden = false
+    }
     @IBAction func addItemButton(_ sender: Any) {
         if(itemText.text != ""){
-            Global.sharedManager.iList.append(itemText.text! + "  -  " + itemPrice.text!)
-            itemText.text = ""
+            Global.sharedManager.iList.append(itemText.text! + "      $" + itemPrice.text!)
+            Global.sharedManager.addItem(name: itemText.text!, totalPrice: Double(itemPrice.text!) as! Double, people: itemPersonList)
+            Global.sharedManager.calculateTotals()
+            //            Global.sharedManager.addItem(name: <#T##String#>, totalPrice: <#T##Double#>, people: <#T##[itemPerson]#>)
+        }
+        else{
+            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+                (action) in alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
-    
     @IBAction func closePopup(_ sender: Any) {
+
         dismiss(animated: true, completion:nil)
     }
+    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return(Global.sharedManager.userTotals.keys.count)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "peopleCell")
+        print(Global.sharedManager.userTotals.keys.count)
+        cell.textLabel?.text = Array(Global.sharedManager.userTotals.keys)[indexPath.row].name
+        return (cell)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let personAdded = Array(Global.sharedManager.userTotals.keys)[indexPath.row]
+        itemPersonList.append(itemPerson(person:personAdded, multiplier: 50))
+        print("item has been added to item person list")
+    }
+    
+    
 }
+
+
+//extension AddItemVC: UITableViewDelegate, UITableViewDataSource {
+//
+//}
+
