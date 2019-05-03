@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		38E027D32279DC32009DA2A2 /* itemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E027D22279DC32009DA2A2 /* itemListViewController.swift */; };
 		38E027D52279EA31009DA2A2 /* pplListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E027D42279EA31009DA2A2 /* pplListViewController.swift */; };
+		C9F8BDB9227C0BA4001B16BC /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8BDB7227C0B9E001B16BC /* ReceiptViewController.swift */; };
+		C9F8BDBB227C0BF5001B16BC /* ReceiptPopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F8BDBA227C0BF5001B16BC /* ReceiptPopoverVC.swift */; };
 		C9FB09972270B39500FA42A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB09962270B39500FA42A3 /* AppDelegate.swift */; };
 		C9FB09992270B39500FA42A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB09982270B39500FA42A3 /* ViewController.swift */; };
 		C9FB099C2270B39500FA42A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FB099A2270B39500FA42A3 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		38E027D22279DC32009DA2A2 /* itemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListViewController.swift; sourceTree = "<group>"; };
 		38E027D42279EA31009DA2A2 /* pplListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pplListViewController.swift; sourceTree = "<group>"; };
+		C9F8BDB7227C0B9E001B16BC /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReceiptViewController.swift; path = BillUp/ReceiptViewController.swift; sourceTree = SOURCE_ROOT; };
+		C9F8BDBA227C0BF5001B16BC /* ReceiptPopoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptPopoverVC.swift; sourceTree = "<group>"; };
 		C9FB09932270B39500FA42A3 /* BillUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FB09962270B39500FA42A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FB09982270B39500FA42A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +96,10 @@
 				C9FB09962270B39500FA42A3 /* AppDelegate.swift */,
 				C9FB09982270B39500FA42A3 /* ViewController.swift */,
 				C9FB09B82271196F00FA42A3 /* NewBillViewController.swift */,
+				C9F8BDB7227C0B9E001B16BC /* ReceiptViewController.swift */,
 				C9FB09BA227121D000FA42A3 /* AddPeopleVC.swift */,
 				C9FB09BC2271F53400FA42A3 /* AddItemVC.swift */,
+				C9F8BDBA227C0BF5001B16BC /* ReceiptPopoverVC.swift */,
 				C9FB099A2270B39500FA42A3 /* Main.storyboard */,
 				C9FB099D2270B39500FA42A3 /* Assets.xcassets */,
 				C9FB099F2270B39500FA42A3 /* LaunchScreen.storyboard */,
@@ -215,6 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E027D52279EA31009DA2A2 /* pplListViewController.swift in Sources */,
+				C9F8BDBB227C0BF5001B16BC /* ReceiptPopoverVC.swift in Sources */,
+				C9F8BDB9227C0BA4001B16BC /* ReceiptViewController.swift in Sources */,
 				C9FB09BD2271F53400FA42A3 /* AddItemVC.swift in Sources */,
 				C9FB09992270B39500FA42A3 /* ViewController.swift in Sources */,
 				C9FB09972270B39500FA42A3 /* AppDelegate.swift in Sources */,

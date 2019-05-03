@@ -24,6 +24,7 @@
                         <segue destination="Ozl-9b-6Cy" kind="relationship" relationship="viewControllers" id="War-31-VoW"/>
                         <segue destination="fYG-nT-cHZ" kind="relationship" relationship="viewControllers" id="WjZ-kF-yzG"/>
                         <segue destination="NBh-sp-sBQ" kind="relationship" relationship="viewControllers" id="QtZ-g8-P7Y"/>
+                        <segue destination="thJ-6y-YAi" kind="relationship" relationship="viewControllers" id="lFr-62-KMc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvo-q3-Zyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,6 +168,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5D9-jj-5BW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="316" y="1171.6641679160421"/>
+        </scene>
+        <!--Receipt-->
+        <scene sceneID="eGi-Ob-U8i">
+            <objects>
+                <viewController id="thJ-6y-YAi" customClass="ReceiptViewController" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cJ-Sh-pfg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUe-AT-aU0">
+                                <rect key="frame" x="102" y="215" width="170" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88753001827927469" green="0.88753001827927469" blue="0.88753001827927469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Calculate Bill"/>
+                                <connections>
+                                    <segue destination="V5O-B0-o3f" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="j5F-ku-ndd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JN0-7R-WqE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Receipt" id="Fbl-2e-CQy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4M-oh-JCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303.2" y="970.16491754122944"/>
         </scene>
         <!--Add-->
         <scene sceneID="mVk-cw-OcX">
@@ -362,6 +391,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mff-0f-mqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2234" y="588"/>
+        </scene>
+        <!--Receipt PopoverVC-->
+        <scene sceneID="Dy3-Ro-yoe">
+            <objects>
+                <viewController id="V5O-B0-o3f" customClass="ReceiptPopoverVC" customModule="BillUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HSd-Gx-IjC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLs-AK-yfJ">
+                                <rect key="frame" x="38" y="60" width="298" height="546"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbP-4E-ebN">
+                                        <rect key="frame" x="15" y="429" width="275" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzT-uL-VoD">
+                                        <rect key="frame" x="15" y="484" width="275" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="closePopup:" destination="V5O-B0-o3f" eventType="touchUpInside" id="y7x-je-TIQ"/>
+                                            <action selector="saveButtonPressed:" destination="V5O-B0-o3f" eventType="touchUpInside" id="fLn-IP-vOa"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T3q-PQ-Jjp">
+                                        <rect key="frame" x="15" y="8" width="275" height="413"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="receiptCell" id="MRW-nx-N4C">
+                                                <rect key="frame" x="0.0" y="28" width="275" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MRW-nx-N4C" id="Nny-bY-vjn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="V5O-B0-o3f" id="jem-aS-1vy"/>
+                                            <outlet property="delegate" destination="V5O-B0-o3f" id="L8q-81-vjV"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91019672927461137" green="0.91019672927461137" blue="0.91019672927461137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="f1n-zF-ecR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Z9-M3-KW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125.5999999999999" y="1285.9070464767617"/>
         </scene>
     </scenes>
 </document>
