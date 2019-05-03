@@ -28,6 +28,14 @@ class ReceiptPopoverVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     @IBAction func saveButtonPressed(_ sender: Any) {
         //insert screenshot code here
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let screenShot = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        let saveData = UIImagePNGRepresentation(screenShot)
+        let compressed = UIImage(data: saveData!)
+        UIImageWriteToSavedPhotosAlbum(compressed!, nil, nil, nil)
+        
     }
     
     @IBAction func closePopup(_ sender: Any) {
