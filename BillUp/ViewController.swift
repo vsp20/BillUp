@@ -23,7 +23,7 @@ class Global{
     func calculateTotals() {
         //remove all total info from userTotals map for recalculation
         for key in userTotals.keys{
-            userTotals[key] = 0.0
+            userTotals[key] = 0.00
         }
         
         for item in items {
@@ -43,14 +43,13 @@ class Global{
     func addItem(name: String, totalPrice: Double, people: [itemPerson]) {
         let item: Item = Item(name: name, totalPrice: totalPrice, people: people)
         items.append(item)
-        print(people)
     }
     
     
     func addPerson(name: String, phoneNumber: String){
         let person: Person = Person(name: name, phoneNumber: phoneNumber)
         if !userTotals.keys.contains(person){
-            userTotals[person] = 0.0
+            userTotals[person] = 0.00
         }
     }
     

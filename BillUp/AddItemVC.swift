@@ -13,6 +13,7 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var itemPrice: UITextField!
     @IBOutlet weak var dropdownTableview: UITableView!
     @IBOutlet weak var addPeopleButton: UIStackView!
+    var personCounter = 0.0
     var itemPersonList: [itemPerson] = []
     
     override func viewDidLoad() {
@@ -28,9 +29,12 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func addItemButton(_ sender: Any) {
         if(itemText.text != ""){
             Global.sharedManager.iList.append(itemText.text! + "      $" + itemPrice.text!)
+            for itemPerson in itemPersonList {
+                itemPerson.multiplier = 100.00 / personCounter
+            }
+            personCounter = 0.0
             Global.sharedManager.addItem(name: itemText.text!, totalPrice: Double(itemPrice.text!) as! Double, people: itemPersonList)
             Global.sharedManager.calculateTotals()
-            //            Global.sharedManager.addItem(name: <#T##String#>, totalPrice: <#T##Double#>, people: <#T##[itemPerson]#>)
         }
         else{
             let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
@@ -42,7 +46,6 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func closePopup(_ sender: Any) {
-
         dismiss(animated: true, completion:nil)
     }
     
@@ -66,7 +69,8 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let personAdded = Array(Global.sharedManager.userTotals.keys)[indexPath.row]
-        itemPersonList.append(itemPerson(person:personAdded, multiplier: 50))
+        itemPersonList.append(itemPerson(person:personAdded, multiplier: 0))
+        personCounter = personCounter + 1.0
         print("item has been added to item person list")
     }
     

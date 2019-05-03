@@ -16,7 +16,7 @@ class ReceiptPopoverVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "receiptCell")
         print(Global.sharedManager.userTotals.keys.count)
-        cell.textLabel?.text = Array(Global.sharedManager.userTotals.keys)[indexPath.row].name + String(Global.sharedManager.userTotals[Array(Global.sharedManager.userTotals.keys)[indexPath.row]]!)
+        cell.textLabel?.text = Array(Global.sharedManager.userTotals.keys)[indexPath.row].name + "   $" +  String(Global.sharedManager.userTotals[Array(Global.sharedManager.userTotals.keys)[indexPath.row]]!)
         return (cell)
     }
     
