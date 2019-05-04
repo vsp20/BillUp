@@ -48,7 +48,7 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     @IBAction func addItemButton(_ sender: Any) {
-        if(itemText.text != ""){
+        if(itemText.text != "" && itemPrice.text! != ""){
             Global.sharedManager.iList.append(itemText.text! + "      $" + itemPrice.text!)
             for itemPerson in itemPersonList {
                 itemPerson.multiplier = 100.00 / personCounter
@@ -57,13 +57,7 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             Global.sharedManager.addItem(name: itemText.text!, totalPrice: Double(itemPrice.text!) as! Double, people: itemPersonList)
             Global.sharedManager.calculateTotals()
         }
-        else{
-//            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-//                (action) in alert.dismiss(animated: true, completion: nil)
-//            }))
-//            self.present(alert, animated: true, completion: nil)
-        }
+
     }
     
     @IBAction func closePopup(_ sender: Any) {
@@ -99,8 +93,4 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     
 }
 
-
-//extension AddItemVC: UITableViewDelegate, UITableViewDataSource {
-//
-//}
 

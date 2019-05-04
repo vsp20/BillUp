@@ -26,6 +26,7 @@ class ReceiptPopoverVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         Global.sharedManager.calculateTotals()
 
     }
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
         //insert screenshot code here
         UIGraphicsBeginImageContext(view.frame.size)
@@ -35,8 +36,10 @@ class ReceiptPopoverVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         let saveData = UIImagePNGRepresentation(screenShot)
         let compressed = UIImage(data: saveData!)
         UIImageWriteToSavedPhotosAlbum(compressed!, nil, nil, nil)
-        
     }
+    
+    
+    
     
     @IBAction func closePopup(_ sender: Any) {
         dismiss(animated: true, completion:nil)
