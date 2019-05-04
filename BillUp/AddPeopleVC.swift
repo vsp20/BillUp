@@ -21,18 +21,25 @@ class AddPeopleVC: UIViewController {
     
     @IBOutlet weak var numberText: UITextField!
     
+    
+    func createAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message,preferredStyle:  UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction (title: "OK", style: UIAlertActionStyle.default, handler: {
+            (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func addPersonButton(_ sender: Any) {
         if(nameText.text != ""){
-            Global.sharedManager.personList.append(nameText.text! + "   Phone #:  " + numberText.text!)
-            Global.sharedManager.addPerson(name: nameText.text!, phoneNumber: numberText.text!)
+            if (Global.sharedManager.addPerson(name: nameText.text!, phoneNumber: numberText.text!)){
+                Global.sharedManager.personList.append(nameText.text! + "   Phone #:  " + numberText.text!)
+                }
+            else{
+            createAlert(title: "Error", message: nameText.text! + " already exists")
+            }
 
-        }
-        else{
-//            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-//                (action) in alert.dismiss(animated: true, completion: nil)
-//            }))
-//            self.present(alert, animated: true, completion: nil)
         }
     }
     

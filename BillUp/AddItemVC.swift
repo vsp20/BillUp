@@ -38,8 +38,15 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     
-    @IBAction func peopleDropdown(_ sender: Any) {
+    
+    func createAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message,preferredStyle:  UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction (title: "OK", style: UIAlertActionStyle.default, handler: {
+            (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
+    
     @IBAction func addItemButton(_ sender: Any) {
         if(itemText.text != ""){
             Global.sharedManager.iList.append(itemText.text! + "      $" + itemPrice.text!)
@@ -85,6 +92,7 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let personAdded = Array(Global.sharedManager.userTotals.keys)[indexPath.row]
         itemPersonList.append(itemPerson(person:personAdded, multiplier: 0))
         personCounter = personCounter + 1.0
+        createAlert(title: "Update", message: personAdded.name + "has been added to the bill")
         print("item has been added to item person list")
     }
     

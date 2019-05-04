@@ -46,12 +46,18 @@ class Global{
     }
     
     
-    func addPerson(name: String, phoneNumber: String){
+    func addPerson(name: String, phoneNumber: String) -> Bool{
         let person: Person = Person(name: name, phoneNumber: phoneNumber)
         if !userTotals.keys.contains(person){
             userTotals[person] = 0.00
+            return true
+        }
+        else{
+            return false
         }
     }
+    
+
     
     class var sharedManager: Global{
         struct Static {
@@ -63,9 +69,12 @@ class Global{
 }
 
 
+
 class Bill {
   
 }
+
+
 
 class Person: Hashable {
     var name: String
