@@ -86,8 +86,7 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let personAdded = Array(Global.sharedManager.userTotals.keys)[indexPath.row]
         itemPersonList.append(itemPerson(person:personAdded, multiplier: 0))
         personCounter = personCounter + 1.0
-        createAlert(title: "Update", message: personAdded.name + "has been added to the bill")
-        print("item has been added to item person list")
+        createAlert(title: "Update", message: personAdded.name + " has been added to the bill")
     }
     
     
