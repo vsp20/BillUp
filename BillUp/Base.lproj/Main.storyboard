@@ -283,9 +283,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-0j-Yc1">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
                                                 <state key="normal" title="Add People"/>
-                                                <connections>
-                                                    <action selector="peopleDropdown:" destination="o5r-0m-BWj" eventType="touchUpInside" id="QaK-xV-8Qh"/>
-                                                </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-tR-8LX">
                                                 <rect key="frame" x="0.0" y="38" width="240" height="170"/>
