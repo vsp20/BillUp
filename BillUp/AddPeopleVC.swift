@@ -28,11 +28,11 @@ class AddPeopleVC: UIViewController {
 
         }
         else{
-            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-                (action) in alert.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
+//            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+//                (action) in alert.dismiss(animated: true, completion: nil)
+//            }))
+//            self.present(alert, animated: true, completion: nil)
         }
     }
     

@@ -23,6 +23,7 @@ class itemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         if editingStyle == UITableViewCell.EditingStyle.delete{
             Global.sharedManager.iList.remove(at: indexPath.row)
+            Global.sharedManager.items.remove(at: indexPath.row)
             myTableView.reloadData()
         }
     }

@@ -8,23 +8,37 @@
 
 import UIKit
 
-class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var itemText: UITextField!
+class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
+    
     @IBOutlet weak var itemPrice: UITextField!
+    @IBOutlet weak var itemText: UITextField!
+    
+    
     @IBOutlet weak var dropdownTableview: UITableView!
     @IBOutlet weak var addPeopleButton: UIStackView!
     var personCounter = 0.0
     var itemPersonList: [itemPerson] = []
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        var allowedCharacters = CharacterSet.decimalDigits
+        allowedCharacters.insert(".")
+        let characterSet = CharacterSet(charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
+    }
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dropdownTableview.isHidden = true
+        itemPrice.delegate = self
         dropdownTableview.reloadData()
     }
     
     
     @IBAction func peopleDropdown(_ sender: Any) {
-        dropdownTableview.isHidden = false
     }
     @IBAction func addItemButton(_ sender: Any) {
         if(itemText.text != ""){
@@ -37,11 +51,11 @@ class AddItemVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             Global.sharedManager.calculateTotals()
         }
         else{
-            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-                (action) in alert.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
+//            let alert = UIAlertController(title: "Incomplete Form", message: "Each field must have something in them", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+//                (action) in alert.dismiss(animated: true, completion: nil)
+//            }))
+//            self.present(alert, animated: true, completion: nil)
         }
     }
     

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3y5-fv-VtP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3y5-fv-VtP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,29 +46,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Step 1: Add people to your bill who will be splitting any costs throughout your trip" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-tC-X9p">
-                                <rect key="frame" x="16" y="134" width="240" height="77"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Step 1: Add people who will be splitting any costs throughout your trip" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-tC-X9p">
+                                <rect key="frame" x="22" y="134" width="228" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-L5-5v0">
-                                <rect key="frame" x="16" y="251" width="240" height="117.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Step 2: Add any items to your bill that you or your friends split the cost of" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-L5-5v0">
+                                <rect key="frame" x="16" y="251" width="240" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Step 2: Add any items to your bill that you or your friends split the cost of (you may add any amount of people to the current item)</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYO-Kl-cql">
-                                <rect key="frame" x="16" y="407" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Step 3: Calculate to get totals of each person on your trip" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYO-Kl-cql">
+                                <rect key="frame" x="16" y="376" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Step 3: Once you are done adding items you may calculate your bill which will give you the running totals oh each person on your trip</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BillUp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xT-IS-F8w">
+                                <rect key="frame" x="30" y="526" width="329" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="90"/>
+                                <color key="textColor" red="0.84846583549222798" green="0.84846583549222798" blue="0.84846583549222798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -330,6 +335,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="textField:" destination="o5r-0m-BWj" eventType="editingDidEnd" id="Mez-bc-vW9"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -343,8 +351,8 @@
                     <connections>
                         <outlet property="addPeopleButton" destination="ZYE-re-B5w" id="KRn-7U-zaO"/>
                         <outlet property="dropdownTableview" destination="lCk-tR-8LX" id="YW0-rK-WWn"/>
-                        <outlet property="itemPrice" destination="9aS-uk-8BS" id="3YM-Al-bYr"/>
-                        <outlet property="itemText" destination="YZz-bn-gzS" id="1Ct-IJ-qse"/>
+                        <outlet property="itemPrice" destination="9aS-uk-8BS" id="gZ1-Qg-Uq0"/>
+                        <outlet property="itemText" destination="YZz-bn-gzS" id="CtT-sg-G86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chf-R3-HSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
